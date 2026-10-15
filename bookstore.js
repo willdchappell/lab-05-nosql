@@ -17,9 +17,18 @@ db.books.insertMany(doc)
 db.authors.find()
 db.books.find()
 // Step 6: insert two new books
-// paste your insert commands here
-db.authors.findOne({ _id: "author_004" })
-db.authors.findOne({ _id: "author_005" })
+db.books.insertMany([
+    {
+      title: "Moneyball",
+      published_year: 2003,
+      author_ids: ["author_004"]
+    },
+    {
+      title: "The Signal and the Noise",
+      published_year: 2012,
+      author_ids: ["author_005"]
+    }
+  ])
 // Step 7: add missing authors
 // paste your insert commands here
 db.authors.insertMany([
